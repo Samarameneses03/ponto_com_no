@@ -1,0 +1,194 @@
+/* estilos base (desktop) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F5F5;
+  color: #000;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  /* Mantém a fonte caso a imagem não carregue */
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 5px 0;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  height: 90vh; /* aumentei a altura para dar mais espaço vertical */
+  overflow: hidden;
+  position: relative;
+}
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.hero-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;  /* ajusta o foco vertical da imagem para mais para baixo */
+  opacity: 0;
+  animation-duration: 16s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: fade;
+
+}
+
+
+
+/* Cada imagem tem delay diferente para a troca sequencial */
+.hero-slider img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.hero-slider img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.hero-slider img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.hero-slider img:nth-child(4) {
+  animation-delay: 12s;
+}
+
+/* Animação fade */
+@keyframes fade {
+  0%   { opacity: 0; }
+  6.25%  { opacity: 1; }
+  25%  { opacity: 1; }
+  31.25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Section */
+.section {
+  padding: 60px 40px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.article {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+.article h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    padding: 25px 35px;
+  }
+
+  /* Remove a logo no mobile */
+  .logo {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+
+  
+  .hero {
+    height: 50vh;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .article h3 {
+    font-size: 18px;
+  }
+
+  .article p {
+    font-size: 13px;
+  }
+}
