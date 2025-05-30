@@ -13,9 +13,8 @@
       <img src="./img/logo.png" alt="Ponto com Nó Logo" />
     </div>
     <nav id="navbar">
-      <a href="#">Início</a>
-      <a href="#">Reportagens</a>
-      <a href="#">Tendências</a>
+      <a href="#reportagens">Destaques</a>
+      <a href="#opiniao">Sob Medida</a>
       <a href="#">Contato</a>
     </nav>
   </header>
@@ -30,22 +29,124 @@
     </div>
   </section>
 
-  <section class="section">
+  <section id="reportagens" class="section">
     <h2>Destaques</h2>
     <div class="articles">
       <div class="article">
-        <h3>O impacto da estética afrofuturista na moda urbana</h3>
-        <p>Como novos criadores estão resgatando identidade e projetando futuro através do vestuário.</p>
+        <a href="/noticia1.html"  target="_blank" rel="noopener noreferrer" class="article-link">
+          <img src="/img/materia1.jpg" alt="Estética Afrofuturista" class="article-img">
+          <h3>O impacto da estética afrofuturista na moda urbana</h3>
+          <p>Como novos criadores estão resgatando identidade e projetando futuro através do vestuário.</p>
+        </a>
       </div>
       <div class="article">
-        <h3>Editorial: Costura de Resistência</h3>
-        <p>Uma narrativa visual sobre tradição, ruptura e a elegância como posicionamento político.</p>
+        <a href="#" class="article-link">
+          <img src="/img/materia2.jpg" alt="Costura de Resistência" class="article-img">
+          <h3>Editorial: Costura de Resistência</h3>
+          <p>Uma narrativa visual sobre tradição, ruptura e a elegância como posicionamento político.</p>
+        </a>
       </div>
       <div class="article">
-        <h3>Entrevista: Juliana Vicente</h3>
-        <p>A diretora fala sobre moda, cinema e a criação de imaginários que inspiram transformação.</p>
+        <a href="#" class="article-link">
+          <img src="/img/materia3.jpg" alt="Entrevista com Juliana Vicente" class="article-img">
+          <h3>Entrevista: Juliana Vicente</h3>
+          <p>A diretora fala sobre moda, cinema e a criação de imaginários que inspiram transformação.</p>
+        </a>
       </div>
     </div>
   </section>
+  
+  
+
+ <!-- Faixa de logos em preto e branco -->
+ <div id="faixa-logos">
+  <div id="logos-correndo">
+    <img src="./img/logo.png" alt="Logo 1" />
+    <img src="./img/logo.png" alt="Logo 2" />
+    <img src="./img/logo.png" alt="Logo 3" />
+    <img src="./img/logo.png" alt="Logo 4" />
+    <img src="./img/logo.png" alt="Logo 5" />
+    <!-- Duplicação para efeito contínuo -->
+    <img src="./img/logo.png" alt="Logo 1" />
+    <img src="./img/logo.png" alt="Logo 2" />
+    <img src="./img/logo.png" alt="Logo 3" />
+    <img src="./img/logo.png" alt="Logo 4" />
+    <img src="./img/logo.png" alt="Logo 5" />
+  </div>
+</div>
+
+<section id="opiniao" class="section">
+  <h2>Sob Medida</h2>
+
+  <div class="opiniao-descricao">
+    <p>
+      Sob Medida é a editoria de artigos de opinião em moda do Ponto com Nó. Aqui, cada texto é pensado com precisão para refletir sobre o vestir como expressão, linguagem e comportamento. Um espaço onde estilo e crítica caminham juntos, costurados por análises que vão além da superfície.
+    </p>
+  </div>
+
+  <div id="opiniao-grid">
+    
+    <a href="#" target="_blank" rel="noopener noreferrer" class="opiniao-box">
+      <div class="opiniao-img-wrapper">
+        <img src="./img/opiniao1.jpg" alt="Opinião 1" class="opiniao-img" />
+      </div>
+      <span class="opiniao-categoria">OPINIÃO</span>
+      <h3>Moda como linguagem política</h3>
+      <p>Expressar-se através do vestuário é mais do que estilo: é resistência.</p>
+    </a>
+    
+    <a href="#" target="_blank" rel="noopener noreferrer" class="opiniao-box">
+      <div class="opiniao-img-wrapper">
+        <img src="./img/opiniao2.jpg" alt="Opinião 2" class="opiniao-img" />
+      </div>
+      <span class="opiniao-categoria">OPINIÃO</span>
+      <h3>Estética e identidade periférica</h3>
+      <p>Como a moda de rua molda narrativas fora do eixo tradicional.</p>
+    </a>
+    
+    <a href="#" target="_blank" rel="noopener noreferrer" class="opiniao-box">
+      <div class="opiniao-img-wrapper">
+        <img src="./img/opiniao3.jpg" alt="Opinião 3" class="opiniao-img" />
+      </div>
+      <span class="opiniao-categoria">OPINIÃO</span>
+      <h3>Autonomia feminina na indústria</h3>
+      <p>Mulheres criam novas formas de liderar e romper padrões.</p>
+    </a>
+
+  </div>
+</section>
+
+
+
+
+<footer id="rodape-site">
+  <div id="rodape-conteudo">
+    
+    <div id="rodape-logo">
+      <img src="./img/logo.png" alt="Logo Ponto com Nó" />
+    </div>
+
+    <div id="rodape-newsletter">
+      <h4>Assine nossa newsletter</h4>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Digite seu e-mail" required />
+        <button type="submit" id="newsletter-botao">Enviar</button>
+      </form>
+    </div>
+
+    <div id="rodape-links">
+      <a href="#">Início</a>
+      <a href="#reportagens">Destaques</a>
+      <a href="#opiniao">Sob Medida</a>
+      <a href="#">Contato</a>
+    </div>
+
+    <div id="rodape-copy">
+      <p>&copy; 2025 Ponto com Nó | Todos os direitos reservados.</p>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
