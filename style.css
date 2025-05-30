@@ -1,4 +1,11 @@
 /* estilos base (desktop) */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #F5F5F5;
   color: #000;
 }
@@ -131,9 +138,25 @@ nav a {
 
 .article {
   background: #fff;
-  padding: 20px;
+  padding: 0;
   border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+  overflow: hidden;
 }
+
+.article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+}
+
 
 .article h3 {
   font-family: 'Playfair Display', serif;
@@ -145,6 +168,16 @@ nav a {
   font-size: 14px;
   color: #333;
 }
+
+.article-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  border-radius: 4px 4px 0 0;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -192,3 +225,284 @@ nav a {
     font-size: 13px;
   }
 }
+
+  /* Noticias */
+
+  #noticia-container {
+  font-family: Georgia, serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#noticia-container .header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#noticia-container .author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#noticia-container .author-photo {
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 15px;
+}
+
+#noticia-container .author-details p {
+  margin: 0;
+}
+
+#noticia-container .meta {
+  font-size: 0.9em;
+  color: #777;
+}
+
+#noticia-container .content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+  font-style: italic;
+  margin: 20px 0;
+  color: #555;
+}
+
+#noticia-container .content p {
+  margin-bottom: 20px;
+}
+
+#noticia-container em {
+  font-style: italic;
+}
+
+
+/* Faixa em preto e branco */
+
+#faixa-logos {
+  background-color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+#logos-correndo {
+  display: inline-block;
+  animation: logos-scroll 15s linear infinite;
+}
+
+#logos-correndo img {
+  height: 80px;
+  margin: 0 30px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+#logos-correndo img:hover {
+  filter: grayscale(0%);
+}
+
+
+
+
+/* RODAPE */ 
+
+
+#rodape-site {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+#rodape-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#rodape-logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+#rodape-newsletter {
+  margin-bottom: 25px;
+}
+
+#rodape-newsletter h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#newsletter-email {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  min-width: 250px;
+  font-size: 14px;
+}
+
+#newsletter-botao {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter-botao:hover {
+  background-color: #ddd;
+}
+
+#rodape-links {
+  margin: 20px 0;
+}
+
+#rodape-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+#rodape-links a:hover {
+  color: #aaa;
+}
+
+#rodape-copy p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  #newsletter-form {
+    flex-direction: column;
+  }
+
+  #newsletter-email {
+    min-width: 100%;
+  }
+
+  #newsletter-botao {
+    width: 100%;
+  }
+}
+
+/* OPINIÃO */
+
+#opiniao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Novo: descrição introdutória da editoria */
+.opiniao-descricao {
+  max-width: 700px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Box principal */
+.opiniao-box {
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative; /* Novo: necessário para aplicar z-index no hover */
+  z-index: 0;
+}
+
+.opiniao-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Novo: traz o item para frente ao passar o mouse */
+}
+
+/* Imagem com borda estilizada */
+.opiniao-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #000;
+  margin-bottom: 10px; /* Novo: evita que o conteúdo encoste na imagem */
+}
+
+.opiniao-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Categoria */
+.opiniao-categoria {
+  font-size: 12px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  padding: 2px 6px;
+  width: fit-content;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Título e parágrafo */
+.opiniao-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.opiniao-box p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+
+
+@keyframes logos-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
