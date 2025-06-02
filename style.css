@@ -39,7 +39,7 @@ header {
 }
 
 .logo img {
-  width: 120px;
+  width: 180px;
   height: auto;
 }
 
@@ -468,6 +468,66 @@ nav a {
   object-fit: cover;
   display: block;
 }
+
+
+/* QUEM SOMOS */
+#quem-somos {
+  background-color: #F5F5F5;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#quem-somos-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+#quem-somos-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+#quem-somos-texto {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 130px;
+}
+
+#quem-somos-imagem {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#quem-somos-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #quem-somos {
+    padding: 40px 20px;
+  }
+
+  #quem-somos-titulo {
+    font-size: 28px;
+  }
+
+  #quem-somos-texto {
+    font-size: 15px;
+  }
+}
+
 
 /* Categoria */
 .opiniao-categoria {
