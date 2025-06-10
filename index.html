@@ -8,18 +8,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="./img/logo.png" alt="Ponto com Nó Logo" />
-    </div>
-    <nav id="navbar">
-      <a href="#Ínicio">Início</a>
-      <a href="#destaques">Destaques</a>
-      <a href="#opiniao">Sob Medida</a>
-      <a href="about.html">Quem Somos</a>
-      <a href="#">Contato</a>
-    </nav>
-  </header>
+ <!-- Botão flutuante -->
+ <button id="apoie-btn">Apoie</button>
+
+ <!-- Janela com QR Code -->
+ <div id="apoie-box">
+   <div id="apoie-header">
+     <span>Ajude nosso projeto ❤️</span>
+     <button id="fechar-btn">&times;</button>
+   </div>
+   <div id="apoie-body">
+     <p>Escaneie o QR Code abaixo para contribuir via PIX:</p>
+     <img src="https://api.qrserver.com/v1/create-qr-code/?data=chave-pix-exemplo&size=150x150" alt="QR Code PIX" />
+   </div>
+   
+ </div>
+ <script src="script.js"></script>
+ <header>
+  <div class="logo">
+    <img src="./img/logo.png" alt="Ponto com Nó Logo" />
+  </div>
+
+  <button class="hamburger-btn" aria-label="Abrir menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav id="navbar">
+    <a href="#Ínicio">Início</a>
+    <a href="#especiais">Especiais</a>
+    <a href="#opiniao">Sob Medida</a>
+    <a href="about.html">Quem Somos</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
 
   <section class="hero">
     <div class="hero-slider">
@@ -31,8 +55,10 @@
     </div>
   </section>
 
-  <section id="destaques" class="section">
-    <h2>Destaques</h2>
+  <section id="especiais" class="section">
+    <h2>Especiais</h2>
+    <p class="especiais-descricao">Um espaço para reportagens e conteúdos aprofundados sobre o universo da moda.
+    </p>
     <div class="articles">
       <div class="article">
         <a href="/noticia1.html"  target="_blank" rel="noopener noreferrer" class="article-link">
@@ -129,8 +155,6 @@
 </section>
 
 
-
-
 <footer id="rodape-site">
   <div id="rodape-conteudo">
     
@@ -148,17 +172,23 @@
 
     <div id="rodape-links">
       <a href="#">Início</a>
-      <a href="#reportagens">Destaques</a>
+      <a href="#especiais">Especiais</a>
       <a href="#opiniao">Sob Medida</a>
       <a href="#">Contato</a>
     </div>
 
     <div id="rodape-copy">
       <p>&copy; 2025 Ponto com Nó | Todos os direitos reservados.</p>
+      <p style="font-size: 12px; color: #aaa;">
+        Imagens utilizadas neste site são provenientes de bancos de imagem gratuitos, como Pexels e Freepik, respeitando os termos de uso de cada plataforma.
+      </p>
     </div>
 
   </div>
 </footer>
+
+
+
 
 </body>
 </html>
