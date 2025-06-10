@@ -227,7 +227,7 @@ nav a {
 }
 
   /* Noticias */
-
+  
   #noticia-container {
   font-family: Georgia, serif;
   background-color: #fff;
@@ -283,6 +283,14 @@ nav a {
   font-style: italic;
 }
 
+/* descrição introdutória da aba especiais */
+.especiais-descricao {
+  max-width: 700px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
 
 /* Faixa em preto e branco */
 
@@ -393,6 +401,7 @@ nav a {
 
 #rodape-copy p {
   font-size: 13px;
+  margin-bottom: 20px;
   color: #ccc;
 }
 
@@ -468,6 +477,88 @@ nav a {
   object-fit: cover;
   display: block;
 }
+
+
+
+#achados-section {
+  background-color: #F5F5F5; /* mesmo fundo do site */
+  color: #000;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+#achados-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#achados-descricao {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#achados-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.achado-card {
+  background: #fff;
+  color: #000;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  min-width: 280px;
+  max-width: 280px;
+  padding: 20px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achado-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achado-card span,
+.achado-card h3,
+.achado-card p,
+.achado-card a {
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.achado-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.achado-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.achado-card a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 
 
 /* QUEM SOMOS */
@@ -566,3 +657,135 @@ nav a {
   }
 }
 
+/* Botão flutuante */
+#apoie-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-weight: 800; /* ou 900 para ainda mais peso */
+color: #000000;   /* preto absoluto */
+
+}
+
+#apoie-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Caixa flutuante com QR */
+#apoie-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 260px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Cabeçalho */
+#apoie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Botão fechar */
+#fechar-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Corpo da caixa */
+#apoie-body {
+  padding: 15px;
+  text-align: center;
+}
+
+#apoie-body img {
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+
+/* Estilos do botão hamburger */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Esconde o menu no mobile por padrão */
+  #navbar {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    right: 0;      /* importante */
+    width: 100%;   /* garante largura total */
+    background-color: #fff;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px; /* evita muito espaçamento nas laterais */
+    border-bottom: 1px solid #ddd;
+    z-index: 1100;
+    overflow: hidden; /* evita scroll estranho */
+  }
+
+
+
+  
+  /* Garantir que os links fiquem visíveis no menu aberto */
+#navbar a {
+  color: #000; /* texto preto */
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+  
+
+  /* Quando menu aberto */
+  #navbar.active {
+    display: flex !important;
+  }
+}
