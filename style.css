@@ -563,7 +563,7 @@ nav a {
 
 /* QUEM SOMOS */
 #quem-somos {
-  background-color: #F5F5F5;
+  background-color: #fff;
   padding: 60px 20px;
   display: flex;
   justify-content: center;
@@ -585,7 +585,7 @@ nav a {
   font-size: 16px;
   line-height: 1.7;
   color: #333;
-  margin-bottom: 130px;
+  
 }
 
 #quem-somos-imagem {
@@ -616,6 +616,110 @@ nav a {
 
   #quem-somos-texto {
     font-size: 15px;
+  }
+}
+
+/* Seção principal */
+#quem-somos-equipe {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+#titulo-nossa-equipe-wrapper {
+  background-color: #fff; /* força o fundo branco */
+  padding: 20px 0;
+  text-align: center;
+}
+
+#titulo-nossa-equipe {
+  font-size: 28px;
+}
+
+
+
+/* Estrutura de cada pessoa */
+/* Blocos menores, centralizados e mais compactos */
+#pessoa-1, #pessoa-2, #pessoa-3, #pessoa-4, #pessoa-5 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+
+/* Fotos */
+#foto-pessoa-1, #foto-pessoa-2, #foto-pessoa-3, #foto-pessoa-4, #foto-pessoa-5 {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Imagens em preto e branco por padrão */
+#foto-pessoa-1,
+#foto-pessoa-2,
+#foto-pessoa-3,
+#foto-pessoa-4,
+#foto-pessoa-5 {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+/* Volta à cor ao passar o mouse */
+#foto-pessoa-1:hover,
+#foto-pessoa-2:hover,
+#foto-pessoa-3:hover,
+#foto-pessoa-4:hover,
+#foto-pessoa-5:hover {
+  filter: grayscale(0%);
+}
+
+
+/* Bio (lado direito) */
+#bio-pessoa-1, #bio-pessoa-2, #bio-pessoa-3, #bio-pessoa-4, #bio-pessoa-5 {
+  flex: 1;
+}
+
+/* Nome */
+#nome-pessoa-1, #nome-pessoa-2, #nome-pessoa-3, #nome-pessoa-4, #nome-pessoa-5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+/* Texto da bio */
+#texto-pessoa-1, #texto-pessoa-2, #texto-pessoa-3, #texto-pessoa-4, #texto-pessoa-5 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  #pessoa-1, #pessoa-2, #pessoa-3, #pessoa-4, #pessoa-5 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #bio-pessoa-1, #bio-pessoa-2, #bio-pessoa-3, #bio-pessoa-4, #bio-pessoa-5 {
+    padding-top: 10px;
   }
 }
 
