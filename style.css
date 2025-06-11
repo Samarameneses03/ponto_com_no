@@ -833,6 +833,67 @@ color: #000000;   /* preto absoluto */
   height: 150px;
 }
 
+/* ACHADOS */
+
+#achados {
+  padding: 60px 20px;
+  background-color: #F5F5F5;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+#achados-topo {
+  margin-bottom: 30px;
+}
+
+#achados-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#achados-descricao {
+  font-size: 16px;
+  color: #333;
+  max-width: 600px;
+  text-align: left;
+}
+
+#achados-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+#achados-imagens img {
+  width: 312px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  cursor: grab;
+}
+
+
+@media (max-width: 768px) {
+  #achados-imagens {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #achados-imagens img {
+    width: 220px;
+    height: 200px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+
 
 /* Estilos do botão hamburger */
 .hamburger-btn {
@@ -893,3 +954,5 @@ color: #000000;   /* preto absoluto */
     display: flex !important;
   }
 }
+
+
