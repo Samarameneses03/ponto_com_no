@@ -18,6 +18,12 @@ body {
   color: #000;
 }
 
+#body-materia {
+  background-color: #fff; /* ou qualquer cor desejada */
+  color: #111; /* cor do texto, se quiser alterar também */
+}
+
+
 header {
   background-color: #fff;
   padding: 20px 40px;
@@ -877,6 +883,7 @@ color: #000000;   /* preto absoluto */
 }
 
 
+
 @media (max-width: 768px) {
   #achados-imagens {
     flex-wrap: nowrap;
@@ -892,6 +899,93 @@ color: #000000;   /* preto absoluto */
     scroll-snap-align: start;
   }
 }
+
+
+
+/* OPINIAO 2 */
+
+#imagem-greta,
+#imagem-stpauli {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+}
+
+#figura-greta {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#imagem-greta {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#figura-greta figcaption {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#figura-greta .credito-imagem {
+  font-size: 11px;
+  color: #999;
+}
+
+#figura-desfile {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#imagem-desfile {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#figura-desfile figcaption {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#figura-desfile .credito-imagem {
+  font-size: 11px;
+  color: #999;
+}
+
+
+#figura-stpauli {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#imagem-stpauli {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#figura-stpauli figcaption {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#figura-stpauli .credito-imagem {
+  font-size: 11px;
+  color: #999;
+}
+
+
 
 
 
